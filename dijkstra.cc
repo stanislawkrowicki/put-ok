@@ -49,6 +49,8 @@ void Dijkstra::run(int sourceVertex)
             }
         }
     }
+
+    wasRun = true;
 }
 
 void Dijkstra::printSolution(int sourceVertex)

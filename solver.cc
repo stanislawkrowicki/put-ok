@@ -1,17 +1,14 @@
 #include <iostream>
 
 #include "graph.hh"
+#include "dijkstra.hh"
 
 int main()
 {
-    Graph graph(5);
+    Graph graph(9);
+    Dijkstra dijkstra(&graph);
 
-    graph.addEdge(0, 1, 5);
-    graph.addEdge(0, 2, 3);
-    graph.addEdge(1, 5, 2);
-    graph.addEdge(2, 3, 7);
-
-    graph.displayMatrix();
-
+    dijkstra.run(0);
+    dijkstra.printSolution(0);
     return 0;
 }
