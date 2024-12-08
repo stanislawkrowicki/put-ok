@@ -19,12 +19,19 @@ private:
     // <summary>
     // Print the distance from the source vertex to the destination vertex
     // </summary>
-    int getDistance(int source, int destination);
+    int getDistance(int destination);
 
 public:
+    // <summary>
+    // Flag to check if Dijkstra's algorithm was run
+    // </summary>
     bool wasRun;
 
     Dijkstra(Graph *graph);
+
+    // <summary>
+    // Run Dijkstra's algorithm from the source vertex
+    // </summary>
     void run(int sourceVertex);
 
     // <summary>

@@ -19,7 +19,7 @@ int Dijkstra::getMinimumDistance()
     return minIndex;
 }
 
-int Dijkstra::getDistance(int source, int destination)
+int Dijkstra::getDistance(int destination)
 {
     return distances[destination];
 }
