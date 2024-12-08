@@ -16,11 +16,6 @@ private:
     // </summary>
     int getMinimumDistance();
 
-    // <summary>
-    // Print the distance from the source vertex to the destination vertex
-    // </summary>
-    int getDistance(int destination);
-
 public:
     // <summary>
     // Flag to check if Dijkstra's algorithm was run
@@ -33,6 +28,11 @@ public:
     // Run Dijkstra's algorithm from the source vertex
     // </summary>
     void run(int sourceVertex);
+
+    // <summary>
+    // Print the distance from the source vertex to the destination vertex
+    // </summary>
+    int getDistance(int destination);
 
     // <summary>
     // Utility: Print all distances to vertices from the source vertex

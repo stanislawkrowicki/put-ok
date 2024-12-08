@@ -3,8 +3,10 @@
 #include <iostream>
 #include <iomanip>
 #include <stack>
+#include <limits.h>
 
 #include "graph.hh"
+#include "dijkstra.hh"
 
 void Graph::_getOddPairings(std::vector<int> &oddDegrees, std::vector<std::vector<std::pair<int, int>>> &allPairs)
 {
@@ -157,6 +159,48 @@ std::vector<std::vector<std::pair<int, int>>> Graph::getOddPairings()
     _getOddPairings(oddDegrees, allPairs);
 
     return allPairs;
+}
+
+std::vector<std::pair<int, int>> Graph::getOptimalPairing()
+{
+    Dijkstra dijkstra(this);
+
+    std::vector<std::vector<std::pair<int, int>>> allPairs = getOddPairings();
+
+    for (const auto &pair : allPairs)
+    {
+        for (const auto &p : pair)
+        {
+            std::cout << "(" << p.first << ", " << p.second << ") ";
+        }
+        std::cout << std::endl;
+    }
+
+    int minWeight = INT_MAX;
+
+    std::vector<std::pair<int, int>> optimalPairing;
+
+    for (const auto &pairing : allPairs)
+    {
+        int weight = 0;
+
+        for (const auto &pair : pairing)
+        {
+            dijkstra.run(pair.first);
+            weight += dijkstra.getDistance(pair.second);
+        }
+
+        std::cout << "Pairing " << "(" << pairing[0].first << ", " << pairing[0].second << ") "
+                  << "(" << pairing[1].first << ", " << pairing[1].second << ") "
+                  << "Weight: " << weight << std::endl;
+        if (weight < minWeight)
+        {
+            minWeight = weight;
+            optimalPairing = pairing;
+        }
+    }
+
+    return optimalPairing;
 }
 
 void Graph::displayMatrix() const

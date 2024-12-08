@@ -26,5 +26,14 @@ int main()
         std::cout << std::endl;
     }
 
+    auto optimalPairing = graph.getOptimalPairing();
+
+    std::cout << "Optimal pairing: " << std::endl;
+
+    for (const auto &pair : optimalPairing)
+    {
+        std::cout << "(" << pair.first << ", " << pair.second << ") ";
+    }
+
     return 0;
 }

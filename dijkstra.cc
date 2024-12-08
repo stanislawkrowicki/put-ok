@@ -19,16 +19,17 @@ int Dijkstra::getMinimumDistance()
     return minIndex;
 }
 
-int Dijkstra::getDistance(int destination)
-{
-    return distances[destination];
-}
-
 Dijkstra::Dijkstra(Graph *graph) : wasRun(false), graph(graph) {};
 
 void Dijkstra::run(int sourceVertex)
 {
     int order = graph->getOrder();
+
+    if (wasRun)
+    {
+        wasSet.clear();
+        distances.clear();
+    }
 
     wasSet.resize(order, false);
     distances.resize(order, INT_MAX);
@@ -51,6 +52,16 @@ void Dijkstra::run(int sourceVertex)
     }
 
     wasRun = true;
+}
+
+int Dijkstra::getDistance(int destination)
+{
+    if (!wasRun)
+    {
+        throw std::invalid_argument("Call run() before getting the distance.");
+    }
+
+    return distances[destination];
 }
 
 void Dijkstra::printSolution(int sourceVertex)

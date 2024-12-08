@@ -27,5 +27,7 @@ public:
 
     std::vector<std::vector<std::pair<int, int>>> getOddPairings();
 
+    std::vector<std::pair<int, int>> getOptimalPairing();
+
     void displayMatrix() const;
 };
