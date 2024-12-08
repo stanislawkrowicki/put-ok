@@ -107,6 +107,21 @@ int Graph::getWeight(int startVertex, int endVertex)
     return adjacencyMatrix[startVertex][endVertex];
 }
 
+int Graph::sumWeight()
+{
+    int sum = 0;
+
+    for (int i = 0; i < order; ++i)
+    {
+        for (int j = i; j < order; ++j)
+        {
+            sum += adjacencyMatrix[i][j];
+        }
+    }
+
+    return sum;
+}
+
 bool Graph::isOddDegree(int vertex)
 {
     return degree(vertex) % 2 == 1;
@@ -152,6 +167,9 @@ std::vector<std::vector<std::pair<int, int>>> Graph::getOddPairings()
     std::vector<int> oddDegrees = getOddDegrees();
     int n = oddDegrees.size();
 
+    if (n == 0)
+        return {};
+
     if (n % 2 != 0)
         throw std::invalid_argument("Number of odd degrees must be even.");
 
@@ -161,24 +179,17 @@ std::vector<std::vector<std::pair<int, int>>> Graph::getOddPairings()
     return allPairs;
 }
 
-std::vector<std::pair<int, int>> Graph::getOptimalPairing()
+OptimalPairing Graph::getOptimalPairing()
 {
     Dijkstra dijkstra(this);
 
     std::vector<std::vector<std::pair<int, int>>> allPairs = getOddPairings();
 
-    for (const auto &pair : allPairs)
-    {
-        for (const auto &p : pair)
-        {
-            std::cout << "(" << p.first << ", " << p.second << ") ";
-        }
-        std::cout << std::endl;
-    }
-
     int minWeight = INT_MAX;
 
     std::vector<std::pair<int, int>> optimalPairing;
+
+    OptimalPairing optimalPairingStruct;
 
     for (const auto &pairing : allPairs)
     {
@@ -193,14 +204,17 @@ std::vector<std::pair<int, int>> Graph::getOptimalPairing()
         std::cout << "Pairing " << "(" << pairing[0].first << ", " << pairing[0].second << ") "
                   << "(" << pairing[1].first << ", " << pairing[1].second << ") "
                   << "Weight: " << weight << std::endl;
+
         if (weight < minWeight)
         {
             minWeight = weight;
             optimalPairing = pairing;
+            optimalPairingStruct.pairing = pairing;
+            optimalPairingStruct.weight = weight;
         }
     }
 
-    return optimalPairing;
+    return optimalPairingStruct;
 }
 
 void Graph::displayMatrix() const

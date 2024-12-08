@@ -17,6 +17,13 @@ int main()
 
     auto oddPairs = graph.getOddPairings();
 
+    if (oddPairs.empty())
+    {
+        std::cout << "No odd pairings found." << std::endl;
+        std::cout << "Chinese Postman Route is of length " << graph.sumWeight() << std::endl;
+        return 0;
+    }
+
     for (const auto &pair : oddPairs)
     {
         for (const auto &p : pair)
@@ -30,10 +37,14 @@ int main()
 
     std::cout << "Optimal pairing: " << std::endl;
 
-    for (const auto &pair : optimalPairing)
+    for (const auto &pair : optimalPairing.pairing)
     {
         std::cout << "(" << pair.first << ", " << pair.second << ") ";
     }
+
+    std::cout << std::endl;
+
+    std::cout << "Chinese Postman Route is of length " << graph.sumWeight() + optimalPairing.weight << std::endl;
 
     return 0;
 }

@@ -2,6 +2,12 @@
 
 #include <vector>
 
+struct OptimalPairing
+{
+    std::vector<std::pair<int, int>> pairing;
+    int weight;
+};
+
 class Graph
 {
 private:
@@ -17,6 +23,7 @@ public:
     void addEdge(int startVertex, int endVertex, int weight);
 
     int getWeight(int startVertex, int endVertex);
+    int sumWeight();
 
     int degree(int vertex);
     bool isOddDegree(int vertex);
@@ -27,7 +34,7 @@ public:
 
     std::vector<std::vector<std::pair<int, int>>> getOddPairings();
 
-    std::vector<std::pair<int, int>> getOptimalPairing();
+    OptimalPairing getOptimalPairing();
 
     void displayMatrix() const;
 };
