@@ -2,8 +2,48 @@
 #include <sstream>
 #include <iostream>
 #include <iomanip>
+#include <stack>
 
 #include "graph.hh"
+
+void Graph::_getOddPairings(std::vector<int> &oddDegrees, std::vector<std::vector<std::pair<int, int>>> &allPairs)
+{
+    struct State
+    {
+        std::vector<std::pair<int, int>> currentPairing;
+        std::vector<int> remainingOdds;
+    };
+
+    std::stack<State> stack;
+    stack.push({{}, oddDegrees});
+
+    while (!stack.empty())
+    {
+        State state = stack.top();
+        stack.pop();
+
+        if (state.remainingOdds.empty())
+        {
+            allPairs.push_back(state.currentPairing);
+            continue;
+        }
+
+        int first = state.remainingOdds.back();
+        state.remainingOdds.pop_back();
+
+        for (size_t i = 0; i < state.remainingOdds.size(); ++i)
+        {
+            int second = state.remainingOdds[i];
+            std::vector<std::pair<int, int>> newPairing = state.currentPairing;
+            newPairing.push_back({first, second});
+
+            std::vector<int> newRemainingOdds = state.remainingOdds;
+            newRemainingOdds.erase(newRemainingOdds.begin() + i);
+
+            stack.push({newPairing, newRemainingOdds});
+        }
+    }
+}
 
 Graph::Graph(int order) : order(order)
 {
@@ -73,6 +113,50 @@ bool Graph::isOddDegree(int vertex)
 bool Graph::isEvenDegree(int vertex)
 {
     return degree(vertex) % 2 == 0;
+}
+
+int Graph::countOddDegrees()
+{
+    int count = 0;
+
+    for (int i = 0; i < order; ++i)
+    {
+        if (isOddDegree(i))
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+std::vector<int> Graph::getOddDegrees()
+{
+    std::vector<int> oddDegrees;
+
+    for (int i = 0; i < order; ++i)
+    {
+        if (isOddDegree(i))
+        {
+            oddDegrees.push_back(i);
+        }
+    }
+
+    return oddDegrees;
+}
+
+std::vector<std::vector<std::pair<int, int>>> Graph::getOddPairings()
+{
+    std::vector<int> oddDegrees = getOddDegrees();
+    int n = oddDegrees.size();
+
+    if (n % 2 != 0)
+        throw std::invalid_argument("Number of odd degrees must be even.");
+
+    std::vector<std::vector<std::pair<int, int>>> allPairs;
+    _getOddPairings(oddDegrees, allPairs);
+
+    return allPairs;
 }
 
 void Graph::displayMatrix() const
