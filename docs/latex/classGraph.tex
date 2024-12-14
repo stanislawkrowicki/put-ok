@@ -1,0 +1,232 @@
+\hypertarget{classGraph}{}\doxysection{Graph Class Reference}
+\label{classGraph}\index{Graph@{Graph}}
+
+
+Represents a graph using an adjacency matrix.  
+
+
+
+
+{\ttfamily \#include $<$graph.\+hh$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraph_a15ec29509f57d73f0e1442d3e936d8b4}{Graph}} (int order)
+\begin{DoxyCompactList}\small\item\em Constructs a graph with a specified number of vertices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_a6707f01afb727e8e5ca93e140a3316cc}{get\+Order}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of vertices in the graph. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGraph_a36b15034fe999f77e7eab0b5c87d9822}{add\+Edge}} (int start\+Vertex, int end\+Vertex, int weight)
+\begin{DoxyCompactList}\small\item\em Adds an edge between two vertices with a specified weight. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_afe1ae25ca42a86cbcd209447108861c6}{get\+Weight}} (int start\+Vertex, int end\+Vertex)
+\begin{DoxyCompactList}\small\item\em Returns the weight of the edge between two vertices. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_a208da2d3e1679ae85448e9e135d7d94b}{sum\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em Returns the sum of all edge weights in the graph. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_a926a44147f7086294fc3dd0289fda668}{degree}} (int vertex)
+\begin{DoxyCompactList}\small\item\em Returns the degree of a specified vertex. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGraph_a327bd015685ba3b45d902db007aa7ce2}{is\+Odd\+Degree}} (int vertex)
+\begin{DoxyCompactList}\small\item\em Checks if a specified vertex has an odd degree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGraph_aa114bb6bf55dbaf3373bcc5234678712}{is\+Even\+Degree}} (int vertex)
+\begin{DoxyCompactList}\small\item\em Checks if a specified vertex has an even degree. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGraph_abfe91830967072219ce3c14f24bc2619}{count\+Odd\+Degrees}} ()
+\begin{DoxyCompactList}\small\item\em Returns the number of vertices with odd degrees. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}{get\+Odd\+Degrees}} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of vertices with odd degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGraph_a0f879e09889d7c719c2093e932b51386}\label{classGraph_a0f879e09889d7c719c2093e932b51386}} 
+std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ $>$ {\bfseries get\+Odd\+Pairings} ()
+\item 
+\mbox{\hyperlink{structOptimalPairing}{Optimal\+Pairing}} \mbox{\hyperlink{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}{get\+Optimal\+Pairing}} ()
+\begin{DoxyCompactList}\small\item\em Returns the optimal pairing of vertices with odd degrees. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}\label{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}} 
+void \mbox{\hyperlink{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}{display\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Displays the adjacency matrix of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a graph using an adjacency matrix. 
+
+The \mbox{\hyperlink{classGraph}{Graph}} class provides methods to manipulate and analyze a graph represented by an adjacency matrix. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGraph_a15ec29509f57d73f0e1442d3e936d8b4}\label{classGraph_a15ec29509f57d73f0e1442d3e936d8b4}} 
+\index{Graph@{Graph}!Graph@{Graph}}
+\index{Graph@{Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{Graph()}{Graph()}}
+{\footnotesize\ttfamily Graph\+::\+Graph (\begin{DoxyParamCaption}\item[{int}]{order }\end{DoxyParamCaption})}
+
+
+
+Constructs a graph with a specified number of vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & The number of vertices in the graph. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGraph_a36b15034fe999f77e7eab0b5c87d9822}\label{classGraph_a36b15034fe999f77e7eab0b5c87d9822}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily void Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{int}]{start\+Vertex,  }\item[{int}]{end\+Vertex,  }\item[{int}]{weight }\end{DoxyParamCaption})}
+
+
+
+Adds an edge between two vertices with a specified weight. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertex} & The starting vertex of the edge. \\
+\hline
+{\em end\+Vertex} & The ending vertex of the edge. \\
+\hline
+{\em weight} & The weight of the edge. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGraph_abfe91830967072219ce3c14f24bc2619}\label{classGraph_abfe91830967072219ce3c14f24bc2619}} 
+\index{Graph@{Graph}!countOddDegrees@{countOddDegrees}}
+\index{countOddDegrees@{countOddDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{countOddDegrees()}{countOddDegrees()}}
+{\footnotesize\ttfamily int Graph\+::count\+Odd\+Degrees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of vertices with odd degrees. 
+
+\begin{DoxyReturn}{Returns}
+The number of vertices with odd degrees. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a926a44147f7086294fc3dd0289fda668}\label{classGraph_a926a44147f7086294fc3dd0289fda668}} 
+\index{Graph@{Graph}!degree@{degree}}
+\index{degree@{degree}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily int Graph\+::degree (\begin{DoxyParamCaption}\item[{int}]{vertex }\end{DoxyParamCaption})}
+
+
+
+Returns the degree of a specified vertex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & The vertex whose degree is to be calculated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The degree of the vertex. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}\label{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}} 
+\index{Graph@{Graph}!getOddDegrees@{getOddDegrees}}
+\index{getOddDegrees@{getOddDegrees}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getOddDegrees()}{getOddDegrees()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ Graph\+::get\+Odd\+Degrees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of vertices with odd degrees. 
+
+\begin{DoxyReturn}{Returns}
+A vector of vertices with odd degrees. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}\label{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}} 
+\index{Graph@{Graph}!getOptimalPairing@{getOptimalPairing}}
+\index{getOptimalPairing@{getOptimalPairing}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getOptimalPairing()}{getOptimalPairing()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structOptimalPairing}{Optimal\+Pairing}} Graph\+::get\+Optimal\+Pairing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the optimal pairing of vertices with odd degrees. 
+
+\begin{DoxyReturn}{Returns}
+An \mbox{\hyperlink{structOptimalPairing}{Optimal\+Pairing}} struct representing the optimal pairing of vertices with odd degrees. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a6707f01afb727e8e5ca93e140a3316cc}\label{classGraph_a6707f01afb727e8e5ca93e140a3316cc}} 
+\index{Graph@{Graph}!getOrder@{getOrder}}
+\index{getOrder@{getOrder}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getOrder()}{getOrder()}}
+{\footnotesize\ttfamily int Graph\+::get\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the number of vertices in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The number of vertices in the graph. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_afe1ae25ca42a86cbcd209447108861c6}\label{classGraph_afe1ae25ca42a86cbcd209447108861c6}} 
+\index{Graph@{Graph}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily int Graph\+::get\+Weight (\begin{DoxyParamCaption}\item[{int}]{start\+Vertex,  }\item[{int}]{end\+Vertex }\end{DoxyParamCaption})}
+
+
+
+Returns the weight of the edge between two vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Vertex} & The starting vertex of the edge. \\
+\hline
+{\em end\+Vertex} & The ending vertex of the edge. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The weight of the edge. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_aa114bb6bf55dbaf3373bcc5234678712}\label{classGraph_aa114bb6bf55dbaf3373bcc5234678712}} 
+\index{Graph@{Graph}!isEvenDegree@{isEvenDegree}}
+\index{isEvenDegree@{isEvenDegree}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isEvenDegree()}{isEvenDegree()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Even\+Degree (\begin{DoxyParamCaption}\item[{int}]{vertex }\end{DoxyParamCaption})}
+
+
+
+Checks if a specified vertex has an even degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & The vertex to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vertex has an even degree, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a327bd015685ba3b45d902db007aa7ce2}\label{classGraph_a327bd015685ba3b45d902db007aa7ce2}} 
+\index{Graph@{Graph}!isOddDegree@{isOddDegree}}
+\index{isOddDegree@{isOddDegree}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{isOddDegree()}{isOddDegree()}}
+{\footnotesize\ttfamily bool Graph\+::is\+Odd\+Degree (\begin{DoxyParamCaption}\item[{int}]{vertex }\end{DoxyParamCaption})}
+
+
+
+Checks if a specified vertex has an odd degree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertex} & The vertex to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the vertex has an odd degree, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a208da2d3e1679ae85448e9e135d7d94b}\label{classGraph_a208da2d3e1679ae85448e9e135d7d94b}} 
+\index{Graph@{Graph}!sumWeight@{sumWeight}}
+\index{sumWeight@{sumWeight}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{sumWeight()}{sumWeight()}}
+{\footnotesize\ttfamily int Graph\+::sum\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the sum of all edge weights in the graph. 
+
+\begin{DoxyReturn}{Returns}
+The sum of all edge weights. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/staszek/put/sem3/put-\/ok/graph.\+hh\item 
+/home/staszek/put/sem3/put-\/ok/graph.\+cc\end{DoxyCompactItemize}
