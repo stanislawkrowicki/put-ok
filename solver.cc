@@ -5,7 +5,7 @@
 
 int main()
 {
-    Graph graph(9);
+    Graph graph(5);
 
     auto oddDegrees = graph.getOddDegrees();
 
