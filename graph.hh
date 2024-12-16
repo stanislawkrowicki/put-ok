@@ -114,6 +114,7 @@ public:
 
     int getOrder();
     void addEdge(int startVertex, int endVertex, int weight);
+    void setAdjacencyMatrix(std::vector<std::vector<int>> matrix);
 
     int getWeight(int startVertex, int endVertex);
     int sumWeight();

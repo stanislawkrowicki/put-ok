@@ -50,22 +50,6 @@ void Graph::_getOddPairings(std::vector<int> &oddDegrees, std::vector<std::vecto
 Graph::Graph(int order) : order(order)
 {
     adjacencyMatrix.resize(order, std::vector<int>(order, 0));
-    // adjacencyMatrix = {
-    //     {0, 4, 0, 0, 0, 0, 0, 8, 0},
-    //     {4, 0, 8, 0, 0, 0, 0, 11, 0},
-    //     {0, 8, 0, 7, 0, 4, 0, 0, 2},
-    //     {0, 0, 7, 0, 9, 14, 0, 0, 0},
-    //     {0, 0, 0, 9, 0, 10, 0, 0, 0},
-    //     {0, 0, 4, 14, 10, 0, 2, 0, 0},
-    //     {0, 0, 0, 0, 0, 2, 0, 1, 6},
-    //     {8, 11, 0, 0, 0, 0, 1, 0, 7},
-    //     {0, 0, 2, 0, 0, 0, 6, 7, 0}};
-    // adjacencyMatrix = {
-    //     {0, 2, 0, 6, 0},
-    //     {2, 0, 3, 8, 5},
-    //     {0, 3, 0, 0, 7},
-    //     {6, 8, 0, 0, 0},
-    //     {0, 5, 7, 0, 0}};
 }
 
 int Graph::getOrder()
@@ -93,6 +77,24 @@ void Graph::addEdge(int startVertex, int endVertex, int weight)
 
         throw std::invalid_argument(errorMessageStream.str());
     }
+}
+
+void Graph::setAdjacencyMatrix(std::vector<std::vector<int>> matrix)
+{
+    if (matrix.size() != order)
+    {
+        throw std::invalid_argument("Matrix size does not match the order of the graph.");
+    }
+
+    for (int i = 0; i < order; ++i)
+    {
+        if (matrix[i].size() != order)
+        {
+            throw std::invalid_argument("Matrix size does not match the order of the graph.");
+        }
+    }
+
+    adjacencyMatrix = matrix;
 }
 
 int Graph::degree(int vertex)
