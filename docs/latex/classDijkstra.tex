@@ -5,26 +5,25 @@
 Implements \mbox{\hyperlink{classDijkstra}{Dijkstra}}\textquotesingle{}s algorithm for finding the shortest paths from a source vertex to all other vertices in a given graph.  
 
 
+
+
+{\ttfamily \#include $<$dijkstra.\+hh$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDijkstra_a9e6c0e700802a54a6af593a72b152571}\label{classDijkstra_a9e6c0e700802a54a6af593a72b152571}} 
-{\bfseries Dijkstra} (\mbox{\hyperlink{classGraph}{Graph}} $\ast$graph)
+\mbox{\hyperlink{classDijkstra_a9e6c0e700802a54a6af593a72b152571}{Dijkstra}} (\mbox{\hyperlink{classGraph}{Graph}} $\ast$graph)
 \item 
-\mbox{\Hypertarget{classDijkstra_ac4894d3c0f3d3b609265e8d716d6df96}\label{classDijkstra_ac4894d3c0f3d3b609265e8d716d6df96}} 
-void {\bfseries run} (int source\+Vertex)
+void \mbox{\hyperlink{classDijkstra_ac4894d3c0f3d3b609265e8d716d6df96}{run}} (int source\+Vertex)
 \item 
-\mbox{\Hypertarget{classDijkstra_aedc7ba5f8d306d77ea3930125968ef75}\label{classDijkstra_aedc7ba5f8d306d77ea3930125968ef75}} 
-int {\bfseries get\+Distance} (int destination)
+int \mbox{\hyperlink{classDijkstra_aedc7ba5f8d306d77ea3930125968ef75}{get\+Distance}} (int destination)
 \item 
-\mbox{\Hypertarget{classDijkstra_af03103558a4fd64e1cc4764255eeea58}\label{classDijkstra_af03103558a4fd64e1cc4764255eeea58}} 
-void {\bfseries print\+Solution} (int source\+Vertex)
+void \mbox{\hyperlink{classDijkstra_af03103558a4fd64e1cc4764255eeea58}{print\+Solution}} (int source\+Vertex)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDijkstra_abefdfd25cf1cf28a4a08e93538b7d57c}\label{classDijkstra_abefdfd25cf1cf28a4a08e93538b7d57c}} 
-bool {\bfseries was\+Run}
+bool \mbox{\hyperlink{classDijkstra_abefdfd25cf1cf28a4a08e93538b7d57c}{was\+Run}}
 \end{DoxyCompactItemize}
 
 
@@ -38,7 +37,46 @@ The graph is represented using an adjacency list.
 \end{DoxyNote}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDijkstra_a9e6c0e700802a54a6af593a72b152571}\label{classDijkstra_a9e6c0e700802a54a6af593a72b152571}} 
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily Dijkstra\+::\+Dijkstra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraph}{Graph}} $\ast$}]{graph }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDijkstra_aedc7ba5f8d306d77ea3930125968ef75}\label{classDijkstra_aedc7ba5f8d306d77ea3930125968ef75}} 
+\index{Dijkstra@{Dijkstra}!getDistance@{getDistance}}
+\index{getDistance@{getDistance}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{getDistance()}{getDistance()}}
+{\footnotesize\ttfamily int Dijkstra\+::get\+Distance (\begin{DoxyParamCaption}\item[{int}]{destination }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDijkstra_af03103558a4fd64e1cc4764255eeea58}\label{classDijkstra_af03103558a4fd64e1cc4764255eeea58}} 
+\index{Dijkstra@{Dijkstra}!printSolution@{printSolution}}
+\index{printSolution@{printSolution}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{printSolution()}{printSolution()}}
+{\footnotesize\ttfamily void Dijkstra\+::print\+Solution (\begin{DoxyParamCaption}\item[{int}]{source\+Vertex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classDijkstra_ac4894d3c0f3d3b609265e8d716d6df96}\label{classDijkstra_ac4894d3c0f3d3b609265e8d716d6df96}} 
+\index{Dijkstra@{Dijkstra}!run@{run}}
+\index{run@{run}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Dijkstra\+::run (\begin{DoxyParamCaption}\item[{int}]{source\+Vertex }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classDijkstra_abefdfd25cf1cf28a4a08e93538b7d57c}\label{classDijkstra_abefdfd25cf1cf28a4a08e93538b7d57c}} 
+\index{Dijkstra@{Dijkstra}!wasRun@{wasRun}}
+\index{wasRun@{wasRun}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{wasRun}{wasRun}}
+{\footnotesize\ttfamily bool Dijkstra\+::was\+Run}
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/staszek/put/sem3/put-\/ok/dijkstra.\+hh\item 
-/home/staszek/put/sem3/put-\/ok/dijkstra.\+cc\end{DoxyCompactItemize}
+/home/staszek/put/sem3/put-\/ok/\mbox{\hyperlink{dijkstra_8hh}{dijkstra.\+hh}}\item 
+/home/staszek/put/sem3/put-\/ok/\mbox{\hyperlink{dijkstra_8cc}{dijkstra.\+cc}}\end{DoxyCompactItemize}

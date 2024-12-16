@@ -9,6 +9,72 @@ using json = nlohmann ::json;
 
 #define EXTRA_OUTPUT
 
+/**
+ * @brief Checks the validity of JSON input data.
+ *
+ * This function checks whether the JSON file contains the necessary fields and has a valid structure.
+ * Example of a valid JSON file:
+ *
+ * @code{.json}
+ * [
+ *     {
+ *         "name": "graph1",
+ *         "order": 9,
+ *         "matrix": [
+ *             [0, 4, 0, 0, 0, 0, 0, 8, 0],
+ *             [4, 0, 8, 0, 0, 0, 0, 11, 0],
+ *             [0, 8, 0, 7, 0, 4, 0, 0, 2],
+ *             [0, 0, 7, 0, 9, 14, 0, 0, 0],
+ *             [0, 0, 0, 9, 0, 10, 0, 0, 0],
+ *             [0, 0, 4, 14, 10, 0, 2, 0, 0],
+ *             [0, 0, 0, 0, 0, 2, 0, 1, 6],
+ *             [8, 11, 0, 0, 0, 0, 1, 0, 7],
+ *             [0, 0, 2, 0, 0, 0, 6, 7, 0]
+ *         ]
+ *     },
+ *     {
+ *         "name": "graph2",
+ *         "order": 5,
+ *         "matrix": [
+ *             [0, 2, 0, 6, 0],
+ *             [2, 0, 3, 8, 5],
+ *             [0, 3, 0, 0, 7],
+ *             [6, 8, 0, 0, 0],
+ *             [0, 5, 7, 0, 0]
+ *         ]
+ *     }
+ * ]
+ * @endcode
+ *
+ * @param data The JSON data loaded from the file.
+ * @return True if the JSON data is valid, false otherwise.
+ */
+bool validateInput(const json &data)
+{
+    if (!data.contains("order") || !data.contains("matrix"))
+    {
+        return false;
+    }
+
+    int order = data["order"];
+    auto matrix = data["matrix"];
+
+    if (matrix.size() != order)
+    {
+        return false;
+    }
+
+    for (int i = 0; i < order; ++i)
+    {
+        if (matrix[i].size() != order)
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 int solve(Graph graph)
 {
     auto oddDegrees = graph.getOddDegrees();
@@ -87,9 +153,9 @@ int main()
 
     json graphData = jsonData[graphName];
 
-    if (!graphData.contains("order") || !graphData.contains("matrix"))
+    if (!validateInput(graphData))
     {
-        std::cerr << "Graph data is not in the correct format." << std::endl;
+        std::cerr << "Invalid JSON data. Refer to documentation." << std::endl;
         return 1;
     }
 

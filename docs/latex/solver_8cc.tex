@@ -1,0 +1,115 @@
+\hypertarget{solver_8cc}{}\doxysection{/home/staszek/put/sem3/put-\/ok/solver.cc File Reference}
+\label{solver_8cc}\index{/home/staszek/put/sem3/put-\/ok/solver.cc@{/home/staszek/put/sem3/put-\/ok/solver.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$nlohmann/json.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}graph.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dijkstra.\+hh\char`\"{}}\newline
+Include dependency graph for solver.\+cc\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{solver_8cc_ae3d04803b42fa7f625d628d65f2cf719}{EXTRA\+\_\+\+OUTPUT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}} = nlohmann \+::\mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{solver_8cc_a265237f8509e33c98e3498f10fb53b14}{validate\+Input}} (const \mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}} \&data)
+\begin{DoxyCompactList}\small\item\em Checks the validity of JSON input data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{solver_8cc_a5d0572de4191e23c069fab67a4aac122}{solve}} (\mbox{\hyperlink{classGraph}{Graph}} graph)
+\item 
+int \mbox{\hyperlink{solver_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{solver_8cc_ae3d04803b42fa7f625d628d65f2cf719}\label{solver_8cc_ae3d04803b42fa7f625d628d65f2cf719}} 
+\index{solver.cc@{solver.cc}!EXTRA\_OUTPUT@{EXTRA\_OUTPUT}}
+\index{EXTRA\_OUTPUT@{EXTRA\_OUTPUT}!solver.cc@{solver.cc}}
+\doxysubsubsection{\texorpdfstring{EXTRA\_OUTPUT}{EXTRA\_OUTPUT}}
+{\footnotesize\ttfamily \#define EXTRA\+\_\+\+OUTPUT}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{solver_8cc_a48603f3809146753b45540f07d4b1103}\label{solver_8cc_a48603f3809146753b45540f07d4b1103}} 
+\index{solver.cc@{solver.cc}!json@{json}}
+\index{json@{json}!solver.cc@{solver.cc}}
+\doxysubsubsection{\texorpdfstring{json}{json}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}} =  nlohmann \+::\mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{solver_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{solver_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{solver.cc@{solver.cc}!main@{main}}
+\index{main@{main}!solver.cc@{solver.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{solver_8cc_a5d0572de4191e23c069fab67a4aac122}\label{solver_8cc_a5d0572de4191e23c069fab67a4aac122}} 
+\index{solver.cc@{solver.cc}!solve@{solve}}
+\index{solve@{solve}!solver.cc@{solver.cc}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily int solve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraph}{Graph}}}]{graph }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{solver_8cc_a265237f8509e33c98e3498f10fb53b14}\label{solver_8cc_a265237f8509e33c98e3498f10fb53b14}} 
+\index{solver.cc@{solver.cc}!validateInput@{validateInput}}
+\index{validateInput@{validateInput}!solver.cc@{solver.cc}}
+\doxysubsubsection{\texorpdfstring{validateInput()}{validateInput()}}
+{\footnotesize\ttfamily bool validate\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{solver_8cc_a48603f3809146753b45540f07d4b1103}{json}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Checks the validity of JSON input data. 
+
+This function checks whether the JSON file contains the necessary fields and has a valid structure. Example of a valid JSON file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        "{}name"{}: "{}graph1"{},}
+\DoxyCodeLine{        "{}order"{}: 9,}
+\DoxyCodeLine{        "{}matrix"{}: [}
+\DoxyCodeLine{            [0, 4, 0, 0, 0, 0, 0, 8, 0],}
+\DoxyCodeLine{            [4, 0, 8, 0, 0, 0, 0, 11, 0],}
+\DoxyCodeLine{            [0, 8, 0, 7, 0, 4, 0, 0, 2],}
+\DoxyCodeLine{            [0, 0, 7, 0, 9, 14, 0, 0, 0],}
+\DoxyCodeLine{            [0, 0, 0, 9, 0, 10, 0, 0, 0],}
+\DoxyCodeLine{            [0, 0, 4, 14, 10, 0, 2, 0, 0],}
+\DoxyCodeLine{            [0, 0, 0, 0, 0, 2, 0, 1, 6],}
+\DoxyCodeLine{            [8, 11, 0, 0, 0, 0, 1, 0, 7],}
+\DoxyCodeLine{            [0, 0, 2, 0, 0, 0, 6, 7, 0]}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        "{}name"{}: "{}graph2"{},}
+\DoxyCodeLine{        "{}order"{}: 5,}
+\DoxyCodeLine{        "{}matrix"{}: [}
+\DoxyCodeLine{            [0, 2, 0, 6, 0],}
+\DoxyCodeLine{            [2, 0, 3, 8, 5],}
+\DoxyCodeLine{            [0, 3, 0, 0, 7],}
+\DoxyCodeLine{            [6, 8, 0, 0, 0],}
+\DoxyCodeLine{            [0, 5, 7, 0, 0]}
+\DoxyCodeLine{        ]}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{]}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The JSON data loaded from the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the JSON data is valid, false otherwise. 
+\end{DoxyReturn}

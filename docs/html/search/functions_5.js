@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sumweight_31',['sumWeight',['../classGraph.html#a208da2d3e1679ae85448e9e135d7d94b',1,'Graph']]]
+  ['main_57',['main',['../solver_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'solver.cc']]]
 ];

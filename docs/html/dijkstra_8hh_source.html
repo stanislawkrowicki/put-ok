@@ -66,10 +66,10 @@ $(function() {
 <div class="title">/home/staszek/put/sem3/put-ok/dijkstra.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<a href="dijkstra_8hh.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;graph.hh&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="graph_8hh.html">graph.hh</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classDijkstra.html">   50</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDijkstra.html">Dijkstra</a></div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div>
@@ -88,27 +88,33 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// &lt;summary&gt;</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// Flag to check if Dijkstra&#39;s algorithm was run</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">bool</span> wasRun;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classDijkstra.html#abefdfd25cf1cf28a4a08e93538b7d57c">   67</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDijkstra.html#abefdfd25cf1cf28a4a08e93538b7d57c">wasRun</a>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classDijkstra.html">Dijkstra</a>(<a class="code" href="classGraph.html">Graph</a> *graph);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classDijkstra.html#a9e6c0e700802a54a6af593a72b152571">Dijkstra</a>(<a class="code" href="classGraph.html">Graph</a> *graph);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// &lt;summary&gt;</span></div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Run Dijkstra&#39;s algorithm from the source vertex</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="comment">// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> run(<span class="keywordtype">int</span> sourceVertex);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDijkstra.html#ac4894d3c0f3d3b609265e8d716d6df96">run</a>(<span class="keywordtype">int</span> sourceVertex);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">// &lt;summary&gt;</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">// Print the distance from the source vertex to the destination vertex</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> getDistance(<span class="keywordtype">int</span> destination);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDijkstra.html#aedc7ba5f8d306d77ea3930125968ef75">getDistance</a>(<span class="keywordtype">int</span> destination);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// &lt;summary&gt;</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// Utility: Print all distances to vertices from the source vertex</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// &lt;/summary&gt;</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> printSolution(<span class="keywordtype">int</span> sourceVertex);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classDijkstra.html#af03103558a4fd64e1cc4764255eeea58">printSolution</a>(<span class="keywordtype">int</span> sourceVertex);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
 <div class="ttc" id="aclassDijkstra_html"><div class="ttname"><a href="classDijkstra.html">Dijkstra</a></div><div class="ttdoc">Implements Dijkstra's algorithm for finding the shortest paths from a source vertex to all other vert...</div><div class="ttdef"><b>Definition:</b> dijkstra.hh:51</div></div>
+<div class="ttc" id="aclassDijkstra_html_a9e6c0e700802a54a6af593a72b152571"><div class="ttname"><a href="classDijkstra.html#a9e6c0e700802a54a6af593a72b152571">Dijkstra::Dijkstra</a></div><div class="ttdeci">Dijkstra(Graph *graph)</div><div class="ttdef"><b>Definition:</b> dijkstra.cc:22</div></div>
+<div class="ttc" id="aclassDijkstra_html_abefdfd25cf1cf28a4a08e93538b7d57c"><div class="ttname"><a href="classDijkstra.html#abefdfd25cf1cf28a4a08e93538b7d57c">Dijkstra::wasRun</a></div><div class="ttdeci">bool wasRun</div><div class="ttdef"><b>Definition:</b> dijkstra.hh:67</div></div>
+<div class="ttc" id="aclassDijkstra_html_ac4894d3c0f3d3b609265e8d716d6df96"><div class="ttname"><a href="classDijkstra.html#ac4894d3c0f3d3b609265e8d716d6df96">Dijkstra::run</a></div><div class="ttdeci">void run(int sourceVertex)</div><div class="ttdef"><b>Definition:</b> dijkstra.cc:24</div></div>
+<div class="ttc" id="aclassDijkstra_html_aedc7ba5f8d306d77ea3930125968ef75"><div class="ttname"><a href="classDijkstra.html#aedc7ba5f8d306d77ea3930125968ef75">Dijkstra::getDistance</a></div><div class="ttdeci">int getDistance(int destination)</div><div class="ttdef"><b>Definition:</b> dijkstra.cc:57</div></div>
+<div class="ttc" id="aclassDijkstra_html_af03103558a4fd64e1cc4764255eeea58"><div class="ttname"><a href="classDijkstra.html#af03103558a4fd64e1cc4764255eeea58">Dijkstra::printSolution</a></div><div class="ttdeci">void printSolution(int sourceVertex)</div><div class="ttdef"><b>Definition:</b> dijkstra.cc:67</div></div>
 <div class="ttc" id="aclassGraph_html"><div class="ttname"><a href="classGraph.html">Graph</a></div><div class="ttdoc">Represents a graph using an adjacency matrix.</div><div class="ttdef"><b>Definition:</b> graph.hh:105</div></div>
+<div class="ttc" id="agraph_8hh_html"><div class="ttname"><a href="graph_8hh.html">graph.hh</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

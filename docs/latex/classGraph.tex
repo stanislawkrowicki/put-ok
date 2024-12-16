@@ -18,6 +18,8 @@ int \mbox{\hyperlink{classGraph_a6707f01afb727e8e5ca93e140a3316cc}{get\+Order}} 
 \begin{DoxyCompactList}\small\item\em Returns the number of vertices in the graph. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGraph_a36b15034fe999f77e7eab0b5c87d9822}{add\+Edge}} (int start\+Vertex, int end\+Vertex, int weight)
 \begin{DoxyCompactList}\small\item\em Adds an edge between two vertices with a specified weight. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGraph_aeaf7241117244b9186652d9b5e55df92}{set\+Adjacency\+Matrix}} (std\+::vector$<$ std\+::vector$<$ int $>$$>$ matrix)
+\item 
 int \mbox{\hyperlink{classGraph_afe1ae25ca42a86cbcd209447108861c6}{get\+Weight}} (int start\+Vertex, int end\+Vertex)
 \begin{DoxyCompactList}\small\item\em Returns the weight of the edge between two vertices. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classGraph_a208da2d3e1679ae85448e9e135d7d94b}{sum\+Weight}} ()
@@ -32,12 +34,10 @@ int \mbox{\hyperlink{classGraph_abfe91830967072219ce3c14f24bc2619}{count\+Odd\+D
 \begin{DoxyCompactList}\small\item\em Returns the number of vertices with odd degrees. \end{DoxyCompactList}\item 
 std\+::vector$<$ int $>$ \mbox{\hyperlink{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}{get\+Odd\+Degrees}} ()
 \begin{DoxyCompactList}\small\item\em Returns a vector of vertices with odd degrees. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGraph_a0f879e09889d7c719c2093e932b51386}\label{classGraph_a0f879e09889d7c719c2093e932b51386}} 
-std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ $>$ {\bfseries get\+Odd\+Pairings} ()
+std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ $>$ \mbox{\hyperlink{classGraph_a0f879e09889d7c719c2093e932b51386}{get\+Odd\+Pairings}} ()
 \item 
 \mbox{\hyperlink{structOptimalPairing}{Optimal\+Pairing}} \mbox{\hyperlink{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}{get\+Optimal\+Pairing}} ()
 \begin{DoxyCompactList}\small\item\em Returns the optimal pairing of vertices with odd degrees. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}\label{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}} 
 void \mbox{\hyperlink{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}{display\+Matrix}} () const
 \begin{DoxyCompactList}\small\item\em Displays the adjacency matrix of the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -116,6 +116,16 @@ Returns the degree of a specified vertex.
 \begin{DoxyReturn}{Returns}
 The degree of the vertex. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}\label{classGraph_af2ef25c77e2b498a9ecbb8a4c101ff93}} 
+\index{Graph@{Graph}!displayMatrix@{displayMatrix}}
+\index{displayMatrix@{displayMatrix}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{displayMatrix()}{displayMatrix()}}
+{\footnotesize\ttfamily void Graph\+::display\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Displays the adjacency matrix of the graph. 
+
 \mbox{\Hypertarget{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}\label{classGraph_a3eb6c0a38af06ff7c41c83bc47ab9ea1}} 
 \index{Graph@{Graph}!getOddDegrees@{getOddDegrees}}
 \index{getOddDegrees@{getOddDegrees}!Graph@{Graph}}
@@ -129,6 +139,12 @@ Returns a vector of vertices with odd degrees.
 \begin{DoxyReturn}{Returns}
 A vector of vertices with odd degrees. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_a0f879e09889d7c719c2093e932b51386}\label{classGraph_a0f879e09889d7c719c2093e932b51386}} 
+\index{Graph@{Graph}!getOddPairings@{getOddPairings}}
+\index{getOddPairings@{getOddPairings}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getOddPairings()}{getOddPairings()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ std\+::pair$<$ int, int $>$ $>$ $>$ Graph\+::get\+Odd\+Pairings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}\label{classGraph_a256855fc65cdb8471ed6fef3a3f0ff1e}} 
 \index{Graph@{Graph}!getOptimalPairing@{getOptimalPairing}}
 \index{getOptimalPairing@{getOptimalPairing}!Graph@{Graph}}
@@ -211,6 +227,12 @@ Checks if a specified vertex has an odd degree.
 \begin{DoxyReturn}{Returns}
 True if the vertex has an odd degree, false otherwise. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{classGraph_aeaf7241117244b9186652d9b5e55df92}\label{classGraph_aeaf7241117244b9186652d9b5e55df92}} 
+\index{Graph@{Graph}!setAdjacencyMatrix@{setAdjacencyMatrix}}
+\index{setAdjacencyMatrix@{setAdjacencyMatrix}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{setAdjacencyMatrix()}{setAdjacencyMatrix()}}
+{\footnotesize\ttfamily void Graph\+::set\+Adjacency\+Matrix (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$}]{matrix }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{classGraph_a208da2d3e1679ae85448e9e135d7d94b}\label{classGraph_a208da2d3e1679ae85448e9e135d7d94b}} 
 \index{Graph@{Graph}!sumWeight@{sumWeight}}
 \index{sumWeight@{sumWeight}!Graph@{Graph}}
@@ -228,5 +250,5 @@ The sum of all edge weights.
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/staszek/put/sem3/put-\/ok/graph.\+hh\item 
-/home/staszek/put/sem3/put-\/ok/graph.\+cc\end{DoxyCompactItemize}
+/home/staszek/put/sem3/put-\/ok/\mbox{\hyperlink{graph_8hh}{graph.\+hh}}\item 
+/home/staszek/put/sem3/put-\/ok/\mbox{\hyperlink{graph_8cc}{graph.\+cc}}\end{DoxyCompactItemize}

@@ -73,35 +73,121 @@ $(function() {
 
 <p>Implements <a class="el" href="classDijkstra.html" title="Implements Dijkstra&#39;s algorithm for finding the shortest paths from a source vertex to all other vert...">Dijkstra</a>'s algorithm for finding the shortest paths from a source vertex to all other vertices in a given graph.  
  <a href="classDijkstra.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="dijkstra_8hh_source.html">dijkstra.hh</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9e6c0e700802a54a6af593a72b152571"><td class="memItemLeft" align="right" valign="top"><a id="a9e6c0e700802a54a6af593a72b152571"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Dijkstra</b> (<a class="el" href="classGraph.html">Graph</a> *graph)</td></tr>
+<tr class="memitem:a9e6c0e700802a54a6af593a72b152571"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDijkstra.html#a9e6c0e700802a54a6af593a72b152571">Dijkstra</a> (<a class="el" href="classGraph.html">Graph</a> *graph)</td></tr>
 <tr class="separator:a9e6c0e700802a54a6af593a72b152571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4894d3c0f3d3b609265e8d716d6df96"><td class="memItemLeft" align="right" valign="top"><a id="ac4894d3c0f3d3b609265e8d716d6df96"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> (int sourceVertex)</td></tr>
+<tr class="memitem:ac4894d3c0f3d3b609265e8d716d6df96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDijkstra.html#ac4894d3c0f3d3b609265e8d716d6df96">run</a> (int sourceVertex)</td></tr>
 <tr class="separator:ac4894d3c0f3d3b609265e8d716d6df96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedc7ba5f8d306d77ea3930125968ef75"><td class="memItemLeft" align="right" valign="top"><a id="aedc7ba5f8d306d77ea3930125968ef75"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getDistance</b> (int destination)</td></tr>
+<tr class="memitem:aedc7ba5f8d306d77ea3930125968ef75"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDijkstra.html#aedc7ba5f8d306d77ea3930125968ef75">getDistance</a> (int destination)</td></tr>
 <tr class="separator:aedc7ba5f8d306d77ea3930125968ef75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af03103558a4fd64e1cc4764255eeea58"><td class="memItemLeft" align="right" valign="top"><a id="af03103558a4fd64e1cc4764255eeea58"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>printSolution</b> (int sourceVertex)</td></tr>
+<tr class="memitem:af03103558a4fd64e1cc4764255eeea58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDijkstra.html#af03103558a4fd64e1cc4764255eeea58">printSolution</a> (int sourceVertex)</td></tr>
 <tr class="separator:af03103558a4fd64e1cc4764255eeea58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abefdfd25cf1cf28a4a08e93538b7d57c"><td class="memItemLeft" align="right" valign="top"><a id="abefdfd25cf1cf28a4a08e93538b7d57c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>wasRun</b></td></tr>
+<tr class="memitem:abefdfd25cf1cf28a4a08e93538b7d57c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDijkstra.html#abefdfd25cf1cf28a4a08e93538b7d57c">wasRun</a></td></tr>
 <tr class="separator:abefdfd25cf1cf28a4a08e93538b7d57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implements <a class="el" href="classDijkstra.html" title="Implements Dijkstra&#39;s algorithm for finding the shortest paths from a source vertex to all other vert...">Dijkstra</a>'s algorithm for finding the shortest paths from a source vertex to all other vertices in a given graph. </p>
 <p>This class provides methods to run <a class="el" href="classDijkstra.html" title="Implements Dijkstra&#39;s algorithm for finding the shortest paths from a source vertex to all other vert...">Dijkstra</a>'s algorithm, retrieve the shortest distance to a specific vertex, and print the solution.</p>
 <dl class="section note"><dt>Note</dt><dd>The graph is represented using an adjacency list. </dd></dl>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a9e6c0e700802a54a6af593a72b152571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6c0e700802a54a6af593a72b152571">&#9670;&nbsp;</a></span>Dijkstra()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Dijkstra::Dijkstra </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGraph.html">Graph</a> *&#160;</td>
+          <td class="paramname"><em>graph</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aedc7ba5f8d306d77ea3930125968ef75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc7ba5f8d306d77ea3930125968ef75">&#9670;&nbsp;</a></span>getDistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Dijkstra::getDistance </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>destination</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af03103558a4fd64e1cc4764255eeea58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af03103558a4fd64e1cc4764255eeea58">&#9670;&nbsp;</a></span>printSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dijkstra::printSolution </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sourceVertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4894d3c0f3d3b609265e8d716d6df96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4894d3c0f3d3b609265e8d716d6df96">&#9670;&nbsp;</a></span>run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Dijkstra::run </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sourceVertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abefdfd25cf1cf28a4a08e93538b7d57c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abefdfd25cf1cf28a4a08e93538b7d57c">&#9670;&nbsp;</a></span>wasRun</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Dijkstra::wasRun</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/staszek/put/sem3/put-ok/<a class="el" href="dijkstra_8hh_source.html">dijkstra.hh</a></li>
-<li>/home/staszek/put/sem3/put-ok/dijkstra.cc</li>
+<li>/home/staszek/put/sem3/put-ok/<a class="el" href="dijkstra_8cc.html">dijkstra.cc</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

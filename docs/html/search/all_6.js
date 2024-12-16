@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pairing_14',['pairing',['../structOptimalPairing.html#aa93bccd6dbfd528db427fbe38d6bbbb5',1,'OptimalPairing']]]
+  ['json_20',['json',['../solver_8cc.html#a48603f3809146753b45540f07d4b1103',1,'solver.cc']]]
 ];
