@@ -121,7 +121,7 @@ int Graph::sumWeight()
 
     for (int i = 0; i < order; ++i)
     {
-        for (int j = i; j < order; ++j)
+        for (int j = i + 1; j < order; ++j)
         {
             sum += adjacencyMatrix[i][j];
         }

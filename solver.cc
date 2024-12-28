@@ -118,6 +118,7 @@ int solve(Graph graph)
     {
         std::cout << "(" << pair.first << ", " << pair.second << ") ";
     }
+    std::cout << "Weight: " << optimalPairing.weight << std::endl;
 
 #endif
     return graph.sumWeight() + optimalPairing.weight;
